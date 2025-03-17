@@ -1,0 +1,78 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "SuccessResponseOptions"
+---
+
+Defined in: index.d.ts:62
+
+## Extends
+
+- [`BaseResponseOptions`](/webdb/reference/interfaces/baseresponseoptions/)\<
+  \| [`OK`](/webdb/reference/enumerations/http_status_code/#ok)
+  \| [`CREATED`](/webdb/reference/enumerations/http_status_code/#created)\>
+
+## Properties
+
+### res
+
+```ts
+res: Response<any, Record<string, any>, number>;
+```
+
+Defined in: index.d.ts:49
+
+#### Inherited from
+
+[`BaseResponseOptions`](/webdb/reference/interfaces/baseresponseoptions/).[`res`](/webdb/reference/interfaces/baseresponseoptions/#res)
+
+***
+
+### table
+
+```ts
+table: string;
+```
+
+Defined in: index.d.ts:50
+
+#### Inherited from
+
+[`BaseResponseOptions`](/webdb/reference/interfaces/baseresponseoptions/).[`table`](/webdb/reference/interfaces/baseresponseoptions/#table)
+
+***
+
+### status
+
+```ts
+status: 
+  | OK
+  | CREATED;
+```
+
+Defined in: index.d.ts:51
+
+#### Inherited from
+
+[`BaseResponseOptions`](/webdb/reference/interfaces/baseresponseoptions/).[`status`](/webdb/reference/interfaces/baseresponseoptions/#status)
+
+***
+
+### data
+
+```ts
+data: JSONValues;
+```
+
+Defined in: index.d.ts:63
+
+***
+
+### key
+
+```ts
+key: null | string;
+```
+
+Defined in: index.d.ts:64

@@ -1,0 +1,72 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "ErrorResponseOptions"
+---
+
+Defined in: index.d.ts:66
+
+## Extends
+
+- [`BaseResponseOptions`](/webdb/reference/interfaces/baseresponseoptions/)\<
+  \| [`BAD_REQUEST`](/webdb/reference/enumerations/http_status_code/#bad_request)
+  \| [`UNAUTHORIZED`](/webdb/reference/enumerations/http_status_code/#unauthorized)
+  \| [`NOT_FOUND`](/webdb/reference/enumerations/http_status_code/#not_found)
+  \| [`WRONG_METHOD`](/webdb/reference/enumerations/http_status_code/#wrong_method)\>
+
+## Properties
+
+### res
+
+```ts
+res: Response<any, Record<string, any>, number>;
+```
+
+Defined in: index.d.ts:49
+
+#### Inherited from
+
+[`BaseResponseOptions`](/webdb/reference/interfaces/baseresponseoptions/).[`res`](/webdb/reference/interfaces/baseresponseoptions/#res)
+
+***
+
+### table
+
+```ts
+table: string;
+```
+
+Defined in: index.d.ts:50
+
+#### Inherited from
+
+[`BaseResponseOptions`](/webdb/reference/interfaces/baseresponseoptions/).[`table`](/webdb/reference/interfaces/baseresponseoptions/#table)
+
+***
+
+### status
+
+```ts
+status: 
+  | BAD_REQUEST
+  | UNAUTHORIZED
+  | NOT_FOUND
+  | WRONG_METHOD;
+```
+
+Defined in: index.d.ts:51
+
+#### Inherited from
+
+[`BaseResponseOptions`](/webdb/reference/interfaces/baseresponseoptions/).[`status`](/webdb/reference/interfaces/baseresponseoptions/#status)
+
+***
+
+### message
+
+```ts
+message: string;
+```
+
+Defined in: index.d.ts:67

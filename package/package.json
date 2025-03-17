@@ -1,0 +1,58 @@
+{
+  "name": "@vimn/webdb",
+  "version": "1.0.2",
+  "description": "An easy-to-use JSON file-based remote database.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "db",
+    "express",
+    "json",
+    "api",
+    "remote"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VimnLabs/webdb.git"
+  },
+  "author": "KingsBeCattz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VimnLabs/webdb/issues"
+  },
+  "homepage": "https://github.com/VimnLabs/webdb#readme",
+  "devDependencies": {
+    "@types/bun": "^1.2.2",
+    "@types/deno": "^2.2.0",
+    "@types/node": "^22.13.1",
+    "unbuild": "^3.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "dependencies": {
+    "dot-prop": "^9.0.0",
+    "express": "^4.21.2",
+    "@types/express": "^5.0.0",
+    "@types/express-serve-static-core": "^5.0.6",
+    "@types/qs": "^6.9.18"
+  }
+}

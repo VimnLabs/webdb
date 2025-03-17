@@ -1,0 +1,100 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "ServerDelete"
+---
+
+```ts
+function ServerDelete<T>(
+   config, 
+   table, 
+   req, 
+res): Response<any, Record<string, any>, number>
+```
+
+Defined in: index.d.ts:161
+
+## Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`T` *extends* `string`[]
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`config`
+
+</td>
+<td>
+
+[`ServerConfig`](/webdb/reference/interfaces/serverconfig/)\<`T`\>
+
+</td>
+</tr>
+<tr>
+<td>
+
+`table`
+
+</td>
+<td>
+
+`string`
+
+</td>
+</tr>
+<tr>
+<td>
+
+`req`
+
+</td>
+<td>
+
+[`ExpressReq`](/webdb/reference/type-aliases/expressreq/)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`res`
+
+</td>
+<td>
+
+[`ExpressRes`](/webdb/reference/type-aliases/expressres/)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Returns
+
+`Response`\<`any`, `Record`\<`string`, `any`\>, `number`\>

@@ -1,0 +1,62 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "BaseResponseOptions"
+---
+
+Defined in: index.d.ts:48
+
+## Extended by
+
+- [`ErrorResponseOptions`](/webdb/reference/interfaces/errorresponseoptions/)
+- [`SuccessResponseOptions`](/webdb/reference/interfaces/successresponseoptions/)
+
+## Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`STATUS` *extends* [`HTTP_STATUS_CODE`](/webdb/reference/enumerations/http_status_code/)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Properties
+
+### res
+
+```ts
+res: Response<any, Record<string, any>, number>;
+```
+
+Defined in: index.d.ts:49
+
+***
+
+### table
+
+```ts
+table: string;
+```
+
+Defined in: index.d.ts:50
+
+***
+
+### status
+
+```ts
+status: STATUS;
+```
+
+Defined in: index.d.ts:51

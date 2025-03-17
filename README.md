@@ -1,0 +1,63 @@
+# EveDB will have:
+- [ ] Authentication system
+
+- [ ] Backup system (CLASS)
+  - [ ] Optional usage
+  - [ ] Custom interval
+  - [ ] Create a backup whenever
+  - [ ] Consume a backup whenever
+  - [ ] Get a list of backups whenever
+  - [ ] Delete a backup whenever
+
+- [ ] Server module
+  - [ ] Config all in one file (vimn.config.json)
+    - [ ] Function: dbServer
+  - [ ] Server Class
+    - [ ] Base Server Class (PENDING)
+    - [ ] Bun Server Class
+    - [ ] Node Server Class
+    - [ ] Router
+      - [ ] Main class and loader
+      - [ ] Get, Set & Delete Route
+      - [ ] Array oriented Routes
+      - [ ] Number oriented Routes
+      - [ ] Backups oriented Routes
+    - [ ] Basic functions (get, set & delete)
+    - [ ] Advanced functions
+      - [ ] Array Oriented
+        - [ ] Push
+        - [ ] Pop
+        - [ ] Shift
+        - [ ] Unshift
+      - [ ] Number Oriented
+        - [ ] Add (+)
+        - [ ] Sub (-)
+        - [ ] Multi (*)
+        - [ ] Divide (/)
+
+- [ ] Client module
+  - [ ] Config all in one file (vimn.config.json)
+    - [ ] Function: dbClient
+  - [ ] Client Class
+    - [ ] Main Client Class
+    - [ ] Accesor "tables"
+      - [ ] Function wrapper
+      - [ ] Client side advanced functions
+        - [ ] Array Oriented
+          - [ ] Join - (Set/Get)
+          - [ ] Concat - (Set)
+          - [ ] Filter - (Get)
+          - [ ] Find - (Get)
+          - [ ] Some - (Get)
+        - [ ] Number Oriented
+          - [ ] Exponentiation (Set/Get)
+          - [ ] Left Shift (Set)
+          - [ ] Right Shift (Get)
+        - [ ] Miscelaneous
+          - [ ] Typeof - (Get)
+          - [ ] Equals - (Get)
+
+# Considerations
+- ⚠ Use Biome **always**
+- ⚠ Use Error Lens
+- ⚠ Do not use [Magic String/Number](https://www.youtube.com/watch?v=UrcxotUmThU)

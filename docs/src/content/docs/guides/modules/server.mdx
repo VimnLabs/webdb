@@ -1,0 +1,39 @@
+---
+title: Server Setup
+---
+import { Steps, LinkCard, Card } from '@astrojs/starlight/components';
+
+<LinkCard
+  title="Server side development"
+  description="If you want to see more things you can do on the server side, visit the notes page."
+  href="/webdb/guides/notes#server-side-development"
+/>
+
+```ts copy wrap twoslash showLineNumbers
+/** This must be a unique secret string, use env variables */
+const AUTH_KEY = process.env['AUTH'] as string
+// ---cut---
+import { DatabaseServer } from "@vimn/webdb"
+
+new DatabaseServer({
+  auth: AUTH_KEY,
+  host: '0.0.0.0',
+  port: 80,
+  tables: ["main", "users", "guilds"],
+  safe: true,
+  path: './db'
+}).begin();
+```
+
+The code seen here starts the express server and creates the necessary files, I will explain each part of the configuration below:
+
+<Card title="Explanation of the configuration" icon="setting">
+<Steps>
+1. <h4 style="margin-bottom: 0"> Auth: </h4> <p style="margin-top: 0">This is the authentication key, it is used to verify that the request is valid.</p>
+2. <h4 style="margin-bottom: 0"> Host: </h4> <p style="margin-top: 0">This is the host that the server will listen to.</p>
+3. <h4 style="margin-bottom: 0"> Port: </h4> <p style="margin-top: 0">This is the port that the server will listen to.</p>
+4. <h4 style="margin-bottom: 0"> Tables: </h4> <p style="margin-top: 0">These are the tables that the server will create, you can create as many as you want.</p>
+5. <h4 style="margin-bottom: 0"> Safe: </h4> <p style="margin-top: 0">This is a boolean that if it is true, disables actions that could be risky. Ex: Delete or overwrite an entire table.</p>
+6. <h4 style="margin-bottom: 0"> Path: </h4> <p style="margin-top: 0">This is the path where the tables will be created.</p>
+</Steps>
+</Card>

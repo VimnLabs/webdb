@@ -1,0 +1,84 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "Response"
+---
+
+```ts
+const Response: object;
+```
+
+Defined in: index.d.ts:75
+
+## Type declaration
+
+### Success()
+
+```ts
+readonly Success: ({ res, table, data, key, status }) => Response$1<any, Record<string, any>, number>;
+```
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`{ res, table, data, key, status }`
+
+</td>
+<td>
+
+[`SuccessResponseOptions`](/webdb/reference/interfaces/successresponseoptions/)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Response$1`\<`any`, `Record`\<`string`, `any`\>, `number`\>
+
+### Error()
+
+```ts
+readonly Error: ({ res, table, message, status }) => Response$1<any, Record<string, any>, number>;
+```
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`{ res, table, message, status }`
+
+</td>
+<td>
+
+[`ErrorResponseOptions`](/webdb/reference/interfaces/errorresponseoptions/)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Response$1`\<`any`, `Record`\<`string`, `any`\>, `number`\>

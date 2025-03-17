@@ -1,0 +1,106 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "DatabaseServer"
+---
+
+Defined in: index.d.ts:150
+
+Database Server
+
+## Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`T` *extends* `string`[]
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Constructors
+
+### new DatabaseServer()
+
+```ts
+new DatabaseServer<T>(config): DatabaseServer<T>
+```
+
+Defined in: index.d.ts:154
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`config`
+
+</td>
+<td>
+
+[`ServerConfig`](/webdb/reference/interfaces/serverconfig/)\<`T`\>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+[`DatabaseServer`](/webdb/reference/classes/databaseserver/)\<`T`\>
+
+## Properties
+
+### config
+
+```ts
+config: ServerConfig<T>;
+```
+
+Defined in: index.d.ts:151
+
+***
+
+### server
+
+```ts
+server: Express;
+```
+
+Defined in: index.d.ts:153
+
+Express server
+
+## Methods
+
+### begin()
+
+```ts
+begin(): Promise<void>
+```
+
+Defined in: index.d.ts:156
+
+Starts the database
+
+#### Returns
+
+`Promise`\<`void`\>

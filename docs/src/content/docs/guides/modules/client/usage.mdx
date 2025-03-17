@@ -1,0 +1,89 @@
+---
+title: Client Usage
+---
+import { Tabs, TabItem, LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
+
+<Tabs>
+<TabItem label="Get">
+```ts copy wrap twoslash showLineNumbers
+/** This must be a unique secret string, use env variables */
+const AUTH_KEY = process.env['AUTH'] as string
+/** This must be the url of your database, either the IP or the URL given by the host, try to add the protocol (http or https). Also avoid ending with /*/
+const HOST = process.env['HOST'] as string
+import { DatabaseClient } from "@vimn/webdb"
+
+const Client = new DatabaseClient({
+  auth: AUTH_KEY,
+  host: HOST,
+  port: 80
+});
+// ---cut---
+// Get the data from the table 'main'
+console.log(await Client.get({ table: 'main' }));
+// Get the raw data from the table 'main'
+console.log(await Client.get.raw({ table: 'main' }));
+// Gets the value of the key 'foo' in the table 'main'
+console.log(await Client.get({ table: 'main', key: 'foo' }));
+```
+</TabItem>
+<TabItem label="Set">
+```ts copy wrap twoslash showLineNumbers
+/** This must be a unique secret string, use env variables */
+const AUTH_KEY = process.env['AUTH'] as string
+/** This must be the url of your database, either the IP or the URL given by the host, try to add the protocol (http or https). Also avoid ending with /*/
+const HOST = process.env['HOST'] as string
+import { DatabaseClient } from "@vimn/webdb"
+
+const Client = new DatabaseClient({
+  auth: AUTH_KEY,
+  host: HOST,
+  port: 80
+});
+// ---cut---
+// Overwrites the table 'main' with a void json
+console.log(await Client.set({ table: 'main', value: {} }));
+// Sets the value 'bar' to the key 'foo' in the table 'main'
+console.log(await Client.set({ table: 'main', key: 'foo', value: 'bar' }));
+```
+</TabItem>
+<TabItem label="Delete">
+```ts copy wrap twoslash showLineNumbers
+/** This must be a unique secret string, use env variables */
+const AUTH_KEY = process.env['AUTH'] as string
+/** This must be the url of your database, either the IP or the URL given by the host, try to add the protocol (http or https). Also avoid ending with /*/
+const HOST = process.env['HOST'] as string
+import { DatabaseClient } from "@vimn/webdb"
+
+const Client = new DatabaseClient({
+  auth: AUTH_KEY,
+  host: HOST,
+  port: 80
+});
+// ---cut---
+// Overwrites the table 'main' with a void json
+console.log(await Client.delete({ table: 'main' }));
+// Deletes the key 'foo' in the table 'main'
+console.log(await Client.delete({ table: 'main', key: 'foo' }));
+```
+</TabItem>
+</Tabs>
+
+<Card title="Returns" icon="open-book">
+<LinkCard
+  title="JSON Values"
+  description="Every time you use a function, it will return a JSON value, see here for its types"
+  href="/webdb/reference/type-aliases/jsonvalues/"
+/>
+Every time you use a raw function, it will return a Success or Error, see here for its types
+<CardGrid>
+<LinkCard
+  title="Success"
+  href="/webdb/reference/interfaces/successresponse/"
+/>
+<LinkCard
+  title="Error"
+  href="/webdb/reference/interfaces/errorresponse/"
+/>
+</CardGrid>
+
+</Card>

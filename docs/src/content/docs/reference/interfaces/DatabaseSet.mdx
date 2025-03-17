@@ -1,0 +1,90 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "DatabaseSet"
+---
+
+Defined in: index.d.ts:112
+
+```ts
+interface DatabaseSet(__namedParameters): Promise<undefined | JSONValues>
+```
+
+Defined in: index.d.ts:114
+
+Set data and get the new data from the database
+
+## Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`__namedParameters`
+
+</td>
+<td>
+
+[`OptionsWithValue`](/webdb/reference/interfaces/optionswithvalue/)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Returns
+
+`Promise`\<`undefined` \| [`JSONValues`](/webdb/reference/type-aliases/jsonvalues/)\>
+
+## Methods
+
+### raw()
+
+```ts
+raw(__namedParameters): Promise<
+  | SuccessResponse
+| ErrorResponse>
+```
+
+Defined in: index.d.ts:116
+
+Set data and get the new raw data from the database
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`__namedParameters`
+
+</td>
+<td>
+
+[`OptionsWithValue`](/webdb/reference/interfaces/optionswithvalue/)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<
+  \| [`SuccessResponse`](/webdb/reference/interfaces/successresponse/)
+  \| [`ErrorResponse`](/webdb/reference/interfaces/errorresponse/)\>

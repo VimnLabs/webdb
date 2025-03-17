@@ -1,0 +1,37 @@
+---
+title: Client Setup
+---
+import { Steps, LinkCard, Card, Aside } from '@astrojs/starlight/components';
+
+{/* <LinkCard
+  title="Server side development"
+  description="If you want to see more things you can do on the server side, visit the notes page."
+  href="/webdb/guides/notes#server-side-development"
+/> */}
+
+```ts copy wrap twoslash showLineNumbers
+/** This must be a unique secret string, use env variables */
+const AUTH_KEY = process.env['AUTH'] as string
+/** This must be the url of your database, either the IP or the URL given by the host, try to add the protocol (http or https). Also avoid ending with /*/
+const HOST = process.env['HOST'] as string
+// ---cut---
+import { DatabaseClient } from "@vimn/webdb"
+
+const Client = new DatabaseClient({
+  auth: AUTH_KEY,
+  host: HOST,
+  port: 80
+});
+```
+
+The code you see here starts an instance of the client, which works to facilitate accesses, I will explain each part of the configuration below:
+
+<Card title="Explanation of the configuration" icon="setting">
+<Steps>
+1. <h4 style="margin-bottom: 0"> Auth: </h4> <p style="margin-top: 0">This is the authentication key, it is used to verify that the request is valid and must be **identical** to the server.</p>
+2. <h4 style="margin-bottom: 0"> Host: </h4>
+<p style="margin-top: 0">This is the url to which the requests will be made, it must be complete, that is to say, it must include the protocol and the domain. Ex: http://localhost</p>
+<Aside type="caution">Avoid ending the url with “/”.</Aside>
+3. <h4 style="margin-bottom: 0"> Port: </h4> <p style="margin-top: 0">This is the port to which the requests will be made.</p>
+</Steps>
+</Card>

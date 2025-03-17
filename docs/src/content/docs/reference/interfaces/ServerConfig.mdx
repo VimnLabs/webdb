@@ -1,0 +1,99 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "ServerConfig"
+---
+
+Defined in: index.d.ts:10
+
+## Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`T` *extends* `string`[]
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Properties
+
+### auth
+
+```ts
+auth: string;
+```
+
+Defined in: index.d.ts:12
+
+Authentication key for requests. I recommend using secure keys, e.g. UUID
+
+***
+
+### host
+
+```ts
+host: string;
+```
+
+Defined in: index.d.ts:14
+
+Host to use
+
+***
+
+### port
+
+```ts
+port: number;
+```
+
+Defined in: index.d.ts:16
+
+Port to use
+
+***
+
+### tables
+
+```ts
+tables: T;
+```
+
+Defined in: index.d.ts:18
+
+Database tables
+
+***
+
+### safe
+
+```ts
+safe: boolean;
+```
+
+Defined in: index.d.ts:20
+
+Disables actions that could be risky. Ex: Delete an entire table or delete several tables.
+
+***
+
+### path
+
+```ts
+path: string;
+```
+
+Defined in: index.d.ts:22
+
+Path to save all data

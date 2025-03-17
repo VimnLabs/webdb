@@ -1,0 +1,47 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "ClientFetch"
+---
+
+```ts
+function ClientFetch(options): Promise<
+  | SuccessResponse
+| ErrorResponse>
+```
+
+Defined in: index.d.ts:173
+
+Makes a request to a database
+
+## Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`options`
+
+</td>
+<td>
+
+ \| [`SimpleClientFetchOptions`](/webdb/reference/interfaces/simpleclientfetchoptions/)\< \| [`GET`](/webdb/reference/enumerations/http_method/#get) \| [`DELETE`](/webdb/reference/enumerations/http_method/#delete)\> \| [`PostClientFetchOptions`](/webdb/reference/interfaces/postclientfetchoptions/)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Returns
+
+`Promise`\<
+  \| [`SuccessResponse`](/webdb/reference/interfaces/successresponse/)
+  \| [`ErrorResponse`](/webdb/reference/interfaces/errorresponse/)\>
