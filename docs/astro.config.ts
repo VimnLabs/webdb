@@ -82,7 +82,7 @@ export default defineConfig({
 					}
 				]),
 				TypeDocGenerator({
-					entryPoints: ['../package/dist/index.d.ts'],
+					entryPoints: ['../package/src/index.ts'],
 					output: 'reference',
 					tsconfig: '../package/',
 					typeDoc: {
